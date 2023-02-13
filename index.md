@@ -17,6 +17,7 @@ Both commands contain a word, all uppercase for the first and lowercase for the 
 
 2. -r  
 The -r option searches through files and directories recursively in order to find the target word(s).
+---
 ```console
 $ grep -r Lying
         ./travel_guides/berlitz1/WhereToGreek.txt:        Lying closest to Athens and the Attic peninsula, the
@@ -34,3 +35,16 @@ $ grep -r Oceanarium
         ./travel_guides/berlitz2/CanaryIslands-WhereToGo.txt:Of the coastline south of Puerto del Rosario, the new cosmopolitan development of El Castillo, also known as Caleta de Fuste, is of most interest. Activities here focus around the attractive, horseshoe-shaped beach (where windsurfing is a particularly popular sport), and the well-designed marina. In the marina, there is an area where you can view the fish that frequent its waters, and a small number of activities use the harbor as a homeport. The Oceanarium is a catamaran that will take you out to visit the dolphins and whales, and the Nautilus is a semi-submersible submarine that has twenty individual seats.
 ```
 When typing these commands, I did not have to enter any specific text file to search through, I was still in the written_2 directory. So, this command is helpful when trying to find specific words within a large amount of text files. It saves you the time of searching for the word within each file and just returns the files which contain it and the parts of the texts which have the word.
+
+3. -w
+The -w option has grep only search for the exact word you input, it will not output any words which contain the target word.
+---
+```console
+$ grep -w hour ch1.txt 
+        The labor intensive [U.S.] apparel market cannot and should not compete with much lower cost labor elsewhere. The stuff depends on somebody sitting at a sewing machine and stitching sleeves on; it is crazy to hurt American consumers by forcing them to buy that at $4 or $5 an hour of labor. We ought to be out of that business.26
+```
+```console
+grep -w can ch2.txt
+        From the nineteenth century on, enterprises in the apparel industry have taken one of three general forms: the manufacturer with an inside shop; the jobber; and the contractor with an outside shop, which can supply either manufacturers or jobbers. The jobber, a form characteristic of women’s apparel, does not produce in a plant that it owns. Jobbers may purchase cloth and materials; design or purchase design of garments; and cut or contract out cutting of fabrics. They turn over sewing and assembly to contractors, and their main role is to merchandise finished product.
+```
+This command will only show excerpts of a text that contain the exact word that you input. It will not include words that contain the targeted word. For example if the target word was "the", the output would not include words like "these" or "there" which contain the word "the", but aren't the actual word.
