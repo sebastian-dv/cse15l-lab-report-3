@@ -4,10 +4,12 @@
 1. -i  
 The -i option ignores cases so it looks for any matching words regardless of the case.
 ---
-```$ grep -i CARNIVAL WhatToHongKong.txt
+```console
+$ grep -i CARNIVAL WhatToHongKong.txt
         the carnival atmosphere of the Cheung Chau Bun Festival, with its high
 ```
-```$ grep -i aloha WhatToHawaii.txt
+```console
+$ grep -i aloha WhatToHawaii.txt
         landing) who nest there. Aloha Airlines offers scheduled flights to
 ```
         
