@@ -15,7 +15,7 @@ $ grep -i aloha WhatToHawaii.txt
         
 Both commands contain a word, all uppercase for the first and lowercase for the second, but the output shows that the word contained in the text is not in the same case as the word I searched for. This shows how the -i option could help looking for any mention of a word, regardless of the case it's in within the text you are searching through.
 
-2. -r
+2. -r  
 The -r option searches through files and directories recursively in order to find the target word(s).
 ```console
 grep -r Lying
