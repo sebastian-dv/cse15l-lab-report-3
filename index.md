@@ -36,7 +36,7 @@ $ grep -r Oceanarium
 ```
 When typing these commands, I did not have to enter any specific text file to search through, I was still in the written_2 directory. So, this command is helpful when trying to find specific words within a large amount of text files. It saves you the time of searching for the word within each file and just returns the files which contain it and the parts of the texts which have the word.
 
-3. -w
+3. -w  
 The -w option has grep only search for the exact word you input, it will not output any words which contain the target word.
 ---
 ```console
@@ -48,3 +48,26 @@ grep -w can ch2.txt
         From the nineteenth century on, enterprises in the apparel industry have taken one of three general forms: the manufacturer with an inside shop; the jobber; and the contractor with an outside shop, which can supply either manufacturers or jobbers. The jobber, a form characteristic of women’s apparel, does not produce in a plant that it owns. Jobbers may purchase cloth and materials; design or purchase design of garments; and cut or contract out cutting of fabrics. They turn over sewing and assembly to contractors, and their main role is to merchandise finished product.
 ```
 This command will only show excerpts of a text that contain the exact word that you input. It will not include words that contain the targeted word. For example if the target word was "the", the output would not include words like "these" or "there" which contain the word "the", but aren't the actual word.
+
+4. -l
+The -l option will only return a list of files that contain the target word, this works best with the -r option which will search through a directory recursively in order to find a word.
+---
+```console
+$ grep -lr Lucayans
+        ./Bahamas-History.txt
+```
+```console
+$ grep -lr skyscraper
+        ./Boston-WhereToGo.txt
+        ./California-WhereToGo.txt
+        ./Berlin-History.txt
+        ./Canada-WhereToGo.txt
+        ./Paris-WhereToGo.txt
+        ./China-WhereToGo.txt
+        ./PuertoRico-WhereToGo.txt
+        ./Beijing-History.txt
+        ./Poland-History.txt
+        ./Beijing-WhereToGo.txt
+```
+This command is useful when you are trying to find what files contain a certain word, but don't want the terminal to output a large wall of text containing excerpts from the files that contain the word. It is much cleaner to just know which files contain a word and then you could manually enter a desired file and use 'ctrl + f' to look for any instances of that word.
+
