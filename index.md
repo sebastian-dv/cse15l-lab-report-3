@@ -49,7 +49,7 @@ grep -w can ch2.txt
 ```
 This command will only show excerpts of a text that contain the exact word that you input. It will not include words that contain the targeted word. For example if the target word was "the", the output would not include words like "these" or "there" which contain the word "the", but aren't the actual word.
 
-4. -l
+4. -l  
 The -l option will only return a list of files that contain the target word, this works best with the -r option which will search through a directory recursively in order to find a word.
 ---
 ```console
