@@ -1,5 +1,6 @@
 # Command Research: grep
 **The commands were all found [here](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)**
+
 ---
 
 1. -i  
